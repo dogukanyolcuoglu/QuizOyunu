@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9WM-J2-20a">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--AnasayfaVC-->
+        <scene sceneID="kRP-5x-iI6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="9WM-J2-20a" customClass="AnasayfaVC" customModule="QuizOyunu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Csj-Aa-WFe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soru" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB1-r0-C3i">
+                                <rect key="frame" x="118" y="128" width="178" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="827-g8-5cw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoc-nP-LmL">
+                                <rect key="frame" x="36" y="507" width="145" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lpr-Zs-T8q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectedButton:" destination="9WM-J2-20a" eventType="touchUpInside" id="YCu-OC-uOR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw2-tg-4Yd">
+                                <rect key="frame" x="240" y="507" width="145" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gqs-hu-5dL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectedButton:" destination="9WM-J2-20a" eventType="touchUpInside" id="MoX-rf-GDp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-Bq-VjI">
+                                <rect key="frame" x="36" y="613" width="145" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lzg-Ex-dBB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectedButton:" destination="9WM-J2-20a" eventType="touchUpInside" id="tQp-Ap-25s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="L97-v9-8ZJ">
+                                <rect key="frame" x="36" y="249" width="349" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="xlA-AE-gBP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB3-kM-Yhm">
+                                <rect key="frame" x="240" y="613" width="145" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Ka-6w-Jsy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="selectedButton:" destination="9WM-J2-20a" eventType="touchUpInside" id="afd-iG-9Vz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fB1-r0-C3i" firstAttribute="leading" secondItem="Xyo-Pb-eH1" secondAttribute="leading" constant="118" id="3kh-kv-ut8"/>
+                            <constraint firstItem="yoc-nP-LmL" firstAttribute="leading" secondItem="Xyo-Pb-eH1" secondAttribute="leading" constant="36" id="6Ee-Sg-b7b"/>
+                            <constraint firstItem="QB3-kM-Yhm" firstAttribute="leading" secondItem="4Rd-Bq-VjI" secondAttribute="trailing" constant="59" id="9lx-LN-2D2"/>
+                            <constraint firstItem="QB3-kM-Yhm" firstAttribute="top" secondItem="Sw2-tg-4Yd" secondAttribute="bottom" constant="46" id="A2S-BD-cTT"/>
+                            <constraint firstItem="fB1-r0-C3i" firstAttribute="centerX" secondItem="Csj-Aa-WFe" secondAttribute="centerX" id="EY5-Dv-W33"/>
+                            <constraint firstItem="Xyo-Pb-eH1" firstAttribute="trailing" secondItem="L97-v9-8ZJ" secondAttribute="trailing" constant="29" id="FC8-3c-C0j"/>
+                            <constraint firstItem="L97-v9-8ZJ" firstAttribute="leading" secondItem="Xyo-Pb-eH1" secondAttribute="leading" constant="36" id="Gmt-lO-7hm"/>
+                            <constraint firstItem="Sw2-tg-4Yd" firstAttribute="leading" secondItem="yoc-nP-LmL" secondAttribute="trailing" constant="59" id="Hho-x4-lEm"/>
+                            <constraint firstItem="fB1-r0-C3i" firstAttribute="top" secondItem="Xyo-Pb-eH1" secondAttribute="top" constant="128" id="LWb-hD-JzY"/>
+                            <constraint firstItem="QB3-kM-Yhm" firstAttribute="width" secondItem="4Rd-Bq-VjI" secondAttribute="width" id="SmD-70-hJV"/>
+                            <constraint firstItem="Xyo-Pb-eH1" firstAttribute="bottom" secondItem="4Rd-Bq-VjI" secondAttribute="bottom" constant="63" id="X6L-38-ORF"/>
+                            <constraint firstItem="L97-v9-8ZJ" firstAttribute="top" secondItem="fB1-r0-C3i" secondAttribute="bottom" constant="75" id="ZUL-oq-pe6"/>
+                            <constraint firstItem="Xyo-Pb-eH1" firstAttribute="bottom" secondItem="QB3-kM-Yhm" secondAttribute="bottom" constant="63" id="Zcd-lA-lzW"/>
+                            <constraint firstItem="4Rd-Bq-VjI" firstAttribute="leading" secondItem="Xyo-Pb-eH1" secondAttribute="leading" constant="36" id="d53-Jh-HAT"/>
+                            <constraint firstItem="4Rd-Bq-VjI" firstAttribute="top" secondItem="yoc-nP-LmL" secondAttribute="bottom" constant="46" id="hxW-5D-7rL"/>
+                            <constraint firstItem="Xyo-Pb-eH1" firstAttribute="trailing" secondItem="Sw2-tg-4Yd" secondAttribute="trailing" constant="29" id="jrz-kh-CXq"/>
+                            <constraint firstItem="Xyo-Pb-eH1" firstAttribute="trailing" secondItem="QB3-kM-Yhm" secondAttribute="trailing" constant="29" id="lLk-T0-oQx"/>
+                            <constraint firstItem="yoc-nP-LmL" firstAttribute="width" secondItem="Sw2-tg-4Yd" secondAttribute="width" id="rjk-qR-LAF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xyo-Pb-eH1"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="yoc-nP-LmL" id="fHp-3U-GKf"/>
+                        <outlet property="button2" destination="Sw2-tg-4Yd" id="45s-ef-kdW"/>
+                        <outlet property="button3" destination="4Rd-Bq-VjI" id="37g-0V-qKP"/>
+                        <outlet property="button4" destination="QB3-kM-Yhm" id="JxQ-BC-ia7"/>
+                        <outlet property="quesitonNumber" destination="fB1-r0-C3i" id="u3x-pV-F0v"/>
+                        <outlet property="questionLabel" destination="L97-v9-8ZJ" id="ezL-0m-4Hf"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="du0-2f-Qes" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="88.405797101449281" y="66.84782608695653"/>
         </scene>
     </scenes>
 </document>
